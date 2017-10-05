@@ -1,0 +1,32 @@
+{
+  "name": "poc-tdw-img",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juneil/poc-tdw-img.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Juneil/poc-tdw-img/issues"
+  },
+  "homepage": "https://github.com/Juneil/poc-tdw-img#readme",
+  "dependencies": {
+    "@hapiness/core": "^1.0.0",
+    "rxjs": "^5.4.3",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.32",
+    "@types/uuid": "^3.4.2",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.3"
+  }
+}
