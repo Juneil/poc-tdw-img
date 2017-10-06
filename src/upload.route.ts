@@ -6,7 +6,12 @@ import { baseUrl } from './index';
 
 @Route({
     path: '/upload',
-    method: 'post'
+    method: 'post',
+    config: {
+        payload: {
+            maxBytes: 209715200
+        }
+    }
 })
 export class UploadRoute implements OnPost {
 
