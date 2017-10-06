@@ -6,15 +6,7 @@ import { baseUrl } from './index';
 
 @Route({
     path: '/upload',
-    method: 'post',
-    config: {
-        payload: {
-            output: 'data',
-            allow: 'multipart/form-data',
-            // output: 'file',
-            maxBytes: 209715200,
-        }
-    }
+    method: 'post'
 })
 export class UploadRoute implements OnPost {
 
@@ -24,10 +16,12 @@ export class UploadRoute implements OnPost {
             reply().code(204);
             return;
         }
+
         const filename = uuid.v1();
         const p = path.resolve(__dirname, '../', 'images', filename);
         console.log(p);
-        fs.writeFile(p, request.payload.image, err => {
+        const img = new Buffer(request.payload.image, 'base64');
+        fs.writeFile(p, img, err => {
             reply({ url: `${baseUrl}/image/${filename}` })
         });
 
